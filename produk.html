@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>🌸 Flowershop - Koleksi Bunga & Buket</title>
+    <!-- Bootstrap 5 CSS + styling tambahan untuk konsistensi -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #fef9f0;
+        font-family: "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      }
+
+      .navbar {
+        background: #fff5ee !important;
+        border-bottom: 1px solid #ffe0c0;
+      }
+
+      .navbar-brand {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+        color: #b34e3a !important;
+        transition: all 0.2s ease;
+      }
+
+      .navbar-brand:hover {
+        color: #9b3e2c !important;
+        transform: scale(1.02);
+      }
+
+      h2 {
+        font-weight: 600;
+        color: #5e2e1c;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 12px;
+      }
+
+      h2:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70px;
+        height: 3px;
+        background: #f3a683;
+        border-radius: 4px;
+      }
+
+      .card {
+        border: none;
+        border-radius: 28px;
+        overflow: hidden;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+        background: white;
+        cursor: default;
+      }
+
+      .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.15) !important;
+      }
+
+      .img-card {
+        width: 100%;
+        aspect-ratio: 1 / 0.9;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+        background-color: #f7e9dd;
+      }
+
+      .card:hover .img-card {
+        transform: scale(1.02);
+      }
+
+      .card-body {
+        padding: 1.2rem 0.8rem;
+        background: #ffffff;
+      }
+
+      .card-body h5 {
+        font-weight: 700;
+        font-size: 1.25rem;
+        color: #442418;
+        margin-bottom: 0.4rem;
+      }
+
+      .card-body p {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #c05c3e;
+        margin-bottom: 0;
+        letter-spacing: 0.5px;
+      }
+
+      /* membuat kontainer utama rapi */
+      .product-grid {
+        margin-top: 0.5rem;
+      }
+
+      /* tombol atau sedikit dekorasi footer opsional */
+      .footer-note {
+        background: #ffe9dc;
+        border-radius: 40px;
+        text-align: center;
+        margin: 2rem auto 3rem auto;
+        padding: 14px 20px;
+        max-width: 480px;
+        color: #7c3f2a;
+        font-weight: 500;
+      }
+
+      @media (max-width: 768px) {
+        .card-body h5 {
+          font-size: 1rem;
+        }
+        .card-body p {
+          font-size: 0.95rem;
+        }
+        .navbar-brand {
+          font-size: 1.4rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-light shadow-sm">
+      <div class="container">
+        <a href="index.html" class="navbar-brand fw-bold">
+          <i class="fas fa-seedling me-1" style="color: #e67e5a"></i> Flowershop
+          <img
+            src="images/logo.png"
+            alt="logo"
+            width="40"
+            height="40"
+            class="ms-2"
+          />
+        </a>
+      </div>
+    </nav>
+
+    <div class="container my-5">
+      <div class="text-center mb-5">
+        <h2 class="mb-2">🌸 Koleksi Eksklusif Kami</h2>
+        <p class="text-muted">
+          Segarkan hari dengan keindahan bunga segar & buket istimewa
+        </p>
+      </div>
+
+      <!-- SEMUA PRODUK dalam satu sistem grid yang rapi, tidak ada elemen floating di luar struktur -->
+      <div class="row g-4 product-grid">
+        <!-- Mawar Merah -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card shadow-sm h-100">
+            <img
+              src="images/mawarmerah.jpg"
+              class="card-img-top img-card"
+              alt="Buket Mawar Merah Segar"
+            />
+            <div class="card-body text-center">
+              <h5>🌹 Mawar Merah</h5>
+              <p>Rp 80.000</p>
+            </div>
+          </div>
+        </div>
+        <!-- Mawar Pink -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card shadow-sm h-100">
+            <img
+              src="images/mawarpink.jpg"
+              class="card-img-top img-card"
+              alt="Mawar Pink Romantis"
+            />
+            <div class="card-body text-center">
+              <h5>🌸 Mawar Pink</h5>
+              <p>Rp 75.000</p>
+            </div>
+          </div>
+        </div>
+        <!-- Mawar Putih -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card shadow-sm h-100">
+            <img
+              src="images/mawarputih.jpg"
+              class="card-img-top img-card"
+              alt="Mawar Putih Elegan"
+            />
+            <div class="card-body text-center">
+              <h5>🤍 Mawar Putih</h5>
+              <p>Rp 85.000</p>
+            </div>
+          </div>
+        </div>
+        <!-- Buket Spesial -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card shadow-sm h-100">
+            <img
+              src="images/buket.jpg"
+              class="card-img-top img-card"
+              alt="Buket Spesial Campuran"
+            />
+            <div class="card-body text-center">
+              <h5>💐 Buket Spesial</h5>
+              <p>Rp 120.000</p>
+            </div>
+          </div>
+        </div>
+        <!-- Buket Premium -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card shadow-sm h-100">
+            <img
+              src="images/bukethd.png"
+              class="card-img-top img-card"
+              alt="Buket Premium Mewah"
+            />
+            <div class="card-body text-center">
+              <h5>✨ Buket Premium</h5>
+              <p>Rp 150.000</p>
+            </div>
+          </div>
+        </div>
+        <!-- Bunga Kertas -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card shadow-sm h-100">
+            <img
+              src="images/bungakertas.webp"
+              class="card-img-top img-card"
+              alt="Bunga Kertas Unik"
+            />
+            <div class="card-body text-center">
+              <h5>📄 Bunga Kertas</h5>
+              <p>Rp 50.000</p>
+            </div>
+          </div>
+        </div>
+        <!-- Bunga Lili -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card shadow-sm h-100">
+            <img
+              src="images/bungalili.jpg"
+              class="card-img-top img-card"
+              alt="Bunga Lili Wangi"
+            />
+            <div class="card-body text-center">
+              <h5>⚜️ Bunga Lili</h5>
+              <p>Rp 90.000</p>
+            </div>
+          </div>
+        </div>
+        <!-- Bunga Teratai -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card shadow-sm h-100">
+            <img
+              src="images/bungateratai.webp"
+              class="card-img-top img-card"
+              alt="Bunga Teratai Damai"
+            />
+            <div class="card-body text-center">
+              <h5>🪷 Bunga Teratai</h5>
+              <p>Rp 70.000</p>
+            </div>
+          </div>
+        </div>
+        <!-- Mawar HD -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card shadow-sm h-100">
+            <img
+              src="images/mawarhd.png"
+              class="card-img-top img-card"
+              alt="Mawar Merah Super Fresh"
+            />
+            <div class="card-body text-center">
+              <h5>📸 Mawar Merah Premium</h5>
+              <p>Rp 95.000</p>
+            </div>
+          </div>
+        </div>
+        <!-- Mawar Hitam -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card shadow-sm h-100">
+            <img
+              src="images/mawarhitamhd.png"
+              class="card-img-top img-card"
+              alt="Mawar Hitam Eksotis"
+            />
+            <div class="card-body text-center">
+              <h5>🖤 Mawar Hitam</h5>
+              <p>Rp 110.000</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end row produk -->
+
+      <div class="footer-note shadow-sm">
+        <i class="fas fa-truck-fast me-2"></i> Gratis ongkir untuk pembelian di
+        atas Rp 200.000 <br />
+        <small class="opacity-75"
+          >*Bunga dipetik pagi hari, dikemas dengan penuh cinta</small
+        >
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
